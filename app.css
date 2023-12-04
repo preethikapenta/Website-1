@@ -1,0 +1,64 @@
+body
+
+{margin:0;
+padding:0;
+background-image:url('suggestion.jpeg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+height:100vh;
+width:100vh;
+}
+h2,h3
+{
+text-align:center;
+color:white;
+}
+@keyfrmaes sparkles {
+0%{
+transform: translateY(0) rotate(0deg);
+opacity:1;
+}
+100%
+{
+transform:translateY(-100px)rotate(360deg);
+opacity:0;
+}
+}
+.sparkle{
+position:relative;
+display:inline-block;
+animation:sparkle 100s linear infinite;
+}
+.sparkle::before
+{
+content:"*";
+position:absolute;
+top:0;
+left:0;
+opacity:0.8;
+color:gold;
+font-size:24px;
+}
+@keyframes glow{
+0%
+{
+text-shadow:0 0 5px #fff, 0 0 20px #fff;
+}
+50%
+{
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+100%
+{
+text-shadow: 0 0 5px #fff, 0 0 10px #fff,0 0 20px #fff;
+}
+}
+.glow-text
+{
+font-size:24px;
+font-weight:bold;
+color:#ffffff;
+animation:glow 2s infinite;
+}
